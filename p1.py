@@ -1,15 +1,11 @@
 #!/usr/bin/env python
 
 
-list = list()
+total = 0
 
 for i in range(1, 1000):
 
     if i % 3 == 0 or i % 5 == 0:
-        list.append(i)
-total = 0
-for i in list:
-    total = total + i
-
+        total += i
 
 print total
