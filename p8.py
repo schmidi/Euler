@@ -22,3 +22,16 @@ digits = "73167176531330624919225119674426574742355349194934" \
          "71636269561882670428252483600823257530420752963450"
 
 # Find the greatest product of five consecutive digits in the 1000-digit number.
+
+result = 0
+
+for i in range(0, len(digits)-5):
+    value = int(digits[i])
+    for j in range(1, 5):
+        value *= int(digits[i+j])
+
+    if value > result:
+        result = value
+
+
+print result
